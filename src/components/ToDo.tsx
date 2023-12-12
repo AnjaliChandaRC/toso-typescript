@@ -1,4 +1,4 @@
-import { DeleteIcon, GreenTickIcon, TickIcon } from "../common/Icons";
+import { DeleteIcon, TickIcon } from "../common/Icons";
 
 const ToDo = () => {
   return (

@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       {/* <ToDo /> */}
-      <ToDoListItem id="text" title="Todo One" isCompleted={true} />
-      <ToDoListItem id="text" title="Todo Two" isCompleted={false} />
+      <ToDoListItem title="Todo One" isCompleted={true} />
+      <ToDoListItem title="Todo Two" isCompleted={false} />
     </>
   );
 }

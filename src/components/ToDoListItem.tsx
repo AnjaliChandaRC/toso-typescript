@@ -2,9 +2,8 @@ import { TrashIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 interface datalist {
   title: string;
   isCompleted: boolean;
-  id: string;
 }
-const ToDoListItem = ({ title, isCompleted, id }: datalist) => {
+const ToDoListItem = ({ title, isCompleted }: datalist) => {
   return (
     <>
         <div className="border-b border-slate flex justify-between items-center h-[49px] px-4 mt-4 w-[30%] m-auto">
