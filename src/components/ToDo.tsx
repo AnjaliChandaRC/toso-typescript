@@ -1,4 +1,6 @@
-import { DeleteIcon, TickIcon } from "../common/Icons";
+// import { DeleteIcon, TickIcon } from "../common/Icons";
+
+import ToDoListItem from "./ToDoListItem";
 
 const ToDo = () => {
   return (
@@ -14,15 +16,26 @@ const ToDo = () => {
             </p>
             <div className="border border-solid border-[#e2e8f0] bg-white rounded-[8px] flex justify-between items-center h-[49px] ps-4 mt-2">
               <input
-                className="ff_inter text-[14px] text-[#334155] pb-1"
+                className="ff_inter text-[14px] text-[#334155] pb-1 w-full pe-3 focus:outline-none"
                 placeholder="Learn html css"
                 type="text"
               />
-              <button className="ff_inter text-[14px] font-semibold text-white pt-[8px]pb-[12px]px-[27px] w-[80px] h-[41px] bg-[#2563EB] rounded-[8px] me-[6px] hover:bg-black transition duration-400 ease-in-out">
-                Add
-              </button>
+              <div>
+                <button className="ff_inter text-[14px] font-semibold text-white pt-[8px]pb-[12px]px-[27px] w-[80px] h-[41px] bg-[#2563EB] rounded-[8px] me-[6px] hover:bg-slate-500 transition duration-400 ease-in-out">
+                  Add
+                </button>
+              </div>
             </div>
-            <div className="border border-solid border-[#e2e8f0] bg-white rounded-[8px_8px_0px_0px] flex justify-between items-center h-[49px] px-4 mt-4">
+          </div>
+          <div className="border border-b-0 rounded mt-4">
+            <div>
+              <ToDoListItem title="Todo One" isCompleted={true} />
+            </div>
+            <div>
+              <ToDoListItem title="Todo One" isCompleted={false} />
+            </div>
+          </div>
+          {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded-[8px_8px_0px_0px] flex justify-between items-center h-[49px] px-4 mt-4">
               <p className="ff_inter text-[14px] text-[#64748B] pb-1">
                 Todo one
               </p>
@@ -34,8 +47,8 @@ const ToDo = () => {
                   <TickIcon />
                 </span>
               </div>
-            </div>
-            {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
+            </div> */}
+          {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
               <p className="ff_inter text-[14px] text-[#CBD5E1] pb-1 line-through">
                 Todo one
               </p>
@@ -48,7 +61,7 @@ const ToDo = () => {
                 </span>
               </div>
             </div> */}
-            {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
+          {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
               <p className="ff_inter text-[14px] text-[#64748B] pb-1">
                 Todo one
               </p>
@@ -113,7 +126,6 @@ const ToDo = () => {
                 </span>
               </div>
             </div> */}
-          </div>
         </div>
       </div>
     </>
