@@ -1,10 +1,13 @@
 import "./App.css";
-import ToDo from "./components/ToDo";
+// import ToDo from "./components/ToDo";
+import ToDoListItem from "./components/ToDoListItem";
 
 function App() {
   return (
     <>
-      <ToDo />
+      {/* <ToDo /> */}
+      <ToDoListItem id="text" title="Todo One" isCompleted={true} />
+      <ToDoListItem id="text" title="Todo Two" isCompleted={false} />
     </>
   );
 }

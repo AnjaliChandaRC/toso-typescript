@@ -4,12 +4,12 @@ const ToDo = () => {
   return (
     <>
       <div className="min-h-screen flex justify-center items-center">
-        <div className="w-full sm:w-[479px] sm:h-[510px] border border-solid border-[#e2e8f0] bg-white rounded-[8px] py-[15px] sm:py-6 px-[15px] sm:px-[30px] mx-5 sm:mx-0">
+        <div className="w-full sm:w-[479px] border border-solid border-[#e2e8f0] bg-white rounded-[8px] sm:p-7 mx-5 sm:mx-0">
           <h3 className="ff_inter text-[24px] font-semibold text-[#020617] text-center">
             Todos
           </h3>
           <div>
-            <p className="ff_inter text-[12px] font-medium text-[#64748B]">
+            <p className="ff_inter text-[12px] font-medium text-[#64748B] pt-4">
               Enter Todo
             </p>
             <div className="border border-solid border-[#e2e8f0] bg-white rounded-[8px] flex justify-between items-center h-[49px] ps-4 mt-2">
@@ -35,7 +35,7 @@ const ToDo = () => {
                 </span>
               </div>
             </div>
-            <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
+            {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
               <p className="ff_inter text-[14px] text-[#CBD5E1] pb-1 line-through">
                 Todo one
               </p>
@@ -44,12 +44,11 @@ const ToDo = () => {
                   <DeleteIcon />
                 </span>
                 <span className="ps-4 sm:ps-2 cursor-pointer">
-                  {/* <TickIcon /> */}
                   <GreenTickIcon />
                 </span>
               </div>
-            </div>
-            <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
+            </div> */}
+            {/* <div className="border border-solid border-[#e2e8f0] bg-white rounded[8px] flex justify-between items-center h-[49px] px-4">
               <p className="ff_inter text-[14px] text-[#64748B] pb-1">
                 Todo one
               </p>
@@ -113,7 +112,7 @@ const ToDo = () => {
                   <TickIcon />
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
