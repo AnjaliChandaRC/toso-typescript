@@ -1,6 +1,27 @@
 import ToDoListItem from "./ToDoListItem";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
+import { useEffect, useState } from "react";
 
 const ToDoList = () => {
+  interface TodoListItemProps {
+    title: string;
+    isCompleted: boolean;
+    id: string;
+  }
+  const [array, setArray] = useState<TodoListItemProps[]>([]);
+  useEffect(() => {
+    const getData = async () => {
+      const querySnapshot = await getDocs(collection(db, "to-do"));
+      const newArray: TodoListItemProps[] = [];
+      querySnapshot.forEach((doc) => {
+        newArray.push({ ...doc.data(), id: doc.id } as TodoListItemProps);
+      });
+      setArray(newArray);
+    };
+
+    getData();
+  }, []);
   return (
     <>
       <div className="min-h-screen flex justify-center items-center mx-5 sm:mx-0">
@@ -22,13 +43,15 @@ const ToDoList = () => {
             </div>
           </div>
           <div className="border rounded-lg mt-4">
-            <ToDoListItem title="Todo One" isCompleted={false} id="1" />
-            <ToDoListItem title="Todo Two" isCompleted={true} id="2" />
-            <ToDoListItem title="Todo Three" isCompleted={false} id="3" />
-            <ToDoListItem title="Todo Four" isCompleted={false} id="4" />
-            <ToDoListItem title="Todo Five" isCompleted={false} id="5" />
-            <ToDoListItem title="Todo Six" isCompleted={false} id="6" />
-            <ToDoListItem title="Todo Seven" isCompleted={false} id="7" />
+            {array.map((obj, i) => (
+              <div key={i}>
+                <ToDoListItem
+                  title={obj.title}
+                  isCompleted={obj.isCompleted}
+                  id={obj.id}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
