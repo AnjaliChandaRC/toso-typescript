@@ -8,7 +8,7 @@ const ToDoListItem = ({ title, isCompleted, id }: TodoListItemProps) => {
   return (
     <>
       <div
-        className="flex justify-between items-center h-[49px] px-4 custom_border"
+        className="flex justify-between items-center h-[49px] px-4 custom_border_2"
         id={id}
       >
         <p

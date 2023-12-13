@@ -4,6 +4,6 @@
   font-family: 'Inter', sans-serif;
 }
 
-.custom_border:not(:last-child) {
-  border-bottom: 1px solid #e2e8f0;
+.custom_border_2 {
+  border-bottom: 1px solid #e2e8f0 !important;
 }

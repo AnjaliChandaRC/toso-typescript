@@ -42,7 +42,7 @@ const ToDoList = () => {
               </button>
             </div>
           </div>
-          <div className="border rounded-lg mt-4">
+          <div className="border rounded-lg mt-4 ">
             {array.map((obj, i) => (
               <div key={i}>
                 <ToDoListItem
