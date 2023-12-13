@@ -8,7 +8,7 @@ import { db } from "../firebase/firebase";
 
 function App() {
   const getData = async () => {
-    const querySnapshot = await getDocs(collection(db, "todo"));
+    const querySnapshot = await getDocs(collection(db, "to-do"));
     querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
     });
